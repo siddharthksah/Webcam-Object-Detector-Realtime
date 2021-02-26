@@ -1,4 +1,3 @@
-imutils==0.5.3
-streamlit==0.74.1
+streamlit
 opencv-contrib-python
 numpy
