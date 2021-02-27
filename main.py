@@ -28,7 +28,7 @@ net = cv2.dnn.readNetFromCaffe('MobileNetSSD_deploy.prototxt.txt',
 
 #camera = VideoStream(src=0).start()
 
-camera = cv2.VideoCapture(0)
+camera = cv2.VideoCapture(-1)
 
 time.sleep(2.0)
 fps = FPS().start()
