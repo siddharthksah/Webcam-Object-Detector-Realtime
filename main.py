@@ -26,7 +26,9 @@ net = cv2.dnn.readNetFromCaffe('MobileNetSSD_deploy.prototxt.txt',
 # and initialize the FPS counter
 #print("[INFO] starting video stream...")
 
-camera = VideoStream(src=0).start()
+#camera = VideoStream(src=0).start()
+
+camera = cv2.VideoCapture(0)
 
 time.sleep(2.0)
 fps = FPS().start()
@@ -59,7 +61,7 @@ if st.button('Stop'):
     run = False
 
 while (run):
-    frame = camera.read()
+    _, frame = camera.read()
     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     frame = imutils.resize(frame, width=400)
 
