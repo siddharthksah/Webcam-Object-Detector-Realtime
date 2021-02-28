@@ -1,4 +1,5 @@
 streamlit
+streamlit-webrtc
 opencv-python--headless
 numpy
 imutils
